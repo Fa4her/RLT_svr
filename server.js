@@ -20,6 +20,7 @@ io.sockets.on("connection", (socket)=>{
     let index = data["index"];
     let coord = data["coord"];
     fs.writeFileSync(`/coord/coord-${index}.json`, coord);
+    console.log("coord: " + coord);
   });
 
   socket.on("need-index", (_)=>{
